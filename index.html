@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StayNest | Premium Shortlet Apartments</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="logo">Stay<span>Nest</span></div>
+    <ul class="nav-links">
+      <li><a href="#listings">Listings</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-link-btn">List Your Space</a>
+      <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Now</button>
+    </div>
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1800&q=80" alt="Luxury Apartment"/>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="pill">🏙️ Premium Short-Stay Apartments</div>
+      <h1>Live Like a <em>Local,</em><br/>Stay Like Royalty</h1>
+      <p>Handpicked apartments in the best neighborhoods. Fully furnished, ready to move in, with hotel-quality service.</p>
+
+      <!-- BOOKING WIDGET -->
+      <div class="booking-widget" id="booking">
+        <div class="bw-field">
+          <label>Destination</label>
+          <input type="text" placeholder="Lagos, Abuja, Port Harcourt..."/>
+        </div>
+        <div class="bw-field">
+          <label>Check-in</label>
+          <input type="date"/>
+        </div>
+        <div class="bw-field">
+          <label>Check-out</label>
+          <input type="date"/>
+        </div>
+        <div class="bw-field">
+          <label>Guests</label>
+          <select><option>1 Guest</option><option>2 Guests</option><option>3-4 Guests</option><option>5+</option></select>
+        </div>
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <div class="hbadge"><span>2,400+</span><small>Apartments</small></div>
+      <div class="hbadge"><span>98%</span><small>Satisfaction</small></div>
+      <div class="hbadge"><span>24/7</span><small>Support</small></div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <span>Featured In:</span>
+      <strong>TechCabal</strong>
+      <strong>Business Day</strong>
+      <strong>The Guardian</strong>
+      <strong>Vanguard</strong>
+      <strong>Nairametrics</strong>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-top reveal">
+        <span class="label">Simple Process</span>
+        <h2>Book in <em>3 Easy Steps</em></h2>
+      </div>
+      <div class="steps-row">
+        <div class="step-card reveal"><div class="step-ico">🔍</div><h3>Search & Browse</h3><p>Filter by location, budget, and amenities. View 360° photos and virtual tours.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step-card reveal"><div class="step-ico">📅</div><h3>Book Instantly</h3><p>Secure your apartment with flexible cancellation. Pay online or on arrival.</p></div>
+        <div class="step-arrow">→</div>
+        <div class="step-card reveal"><div class="step-ico">🗝️</div><h3>Move In & Enjoy</h3><p>Get your access code. Our team is available 24/7 for any assistance.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LISTINGS -->
+  <section id="listings" class="listings-section">
+    <div class="container">
+      <div class="section-top reveal">
+        <span class="label">Top Picks</span>
+        <h2>Featured <em>Apartments</em></h2>
+        <p>Verified, vetted, and loved by thousands of guests.</p>
+      </div>
+      <div class="listing-filters reveal">
+        <button class="lf active" data-f="all">All</button>
+        <button class="lf" data-f="studio">Studio</button>
+        <button class="lf" data-f="1br">1 Bedroom</button>
+        <button class="lf" data-f="2br">2 Bedrooms</button>
+        <button class="lf" data-f="3br">3+ Bedrooms</button>
+      </div>
+      <div class="listings-grid reveal" id="listingsGrid"></div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section id="amenities" class="amenities-section">
+    <div class="container">
+      <div class="section-top reveal">
+        <span class="label">What's Included</span>
+        <h2>Everything You <em>Need</em></h2>
+      </div>
+      <div class="amenity-grid reveal">
+        <div class="am-item"><span>📶</span><p>High-Speed WiFi</p></div>
+        <div class="am-item"><span>❄️</span><p>Air Conditioning</p></div>
+        <div class="am-item"><span>🍳</span><p>Full Kitchen</p></div>
+        <div class="am-item"><span>🧺</span><p>Washer & Dryer</p></div>
+        <div class="am-item"><span>📺</span><p>Smart TV & Netflix</p></div>
+        <div class="am-item"><span>🚗</span><p>Free Parking</p></div>
+        <div class="am-item"><span>🏊</span><p>Pool Access</p></div>
+        <div class="am-item"><span>🏋️</span><p>Gym Access</p></div>
+        <div class="am-item"><span>🔒</span><p>24/7 Security</p></div>
+        <div class="am-item"><span>🛎️</span><p>Concierge Service</p></div>
+        <div class="am-item"><span>🧹</span><p>Weekly Cleaning</p></div>
+        <div class="am-item"><span>⚡</span><p>Generator Backup</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS MAP -->
+  <section id="locations" class="locations-section">
+    <div class="container">
+      <div class="section-top reveal">
+        <span class="label">Our Coverage</span>
+        <h2>Available Across <em>Nigeria</em></h2>
+      </div>
+      <div class="loc-grid reveal">
+        <div class="loc-card" style="background-image:url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80')">
+          <div class="loc-overlay"><h3>Lagos</h3><p>1,200+ Apartments</p></div>
+        </div>
+        <div class="loc-card" style="background-image:url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=600&q=80')">
+          <div class="loc-overlay"><h3>Abuja</h3><p>680+ Apartments</p></div>
+        </div>
+        <div class="loc-card" style="background-image:url('https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=600&q=80')">
+          <div class="loc-overlay"><h3>Port Harcourt</h3><p>340+ Apartments</p></div>
+        </div>
+        <div class="loc-card" style="background-image:url('https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80')">
+          <div class="loc-overlay"><h3>Enugu</h3><p>180+ Apartments</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <div class="section-top reveal">
+        <span class="label">What Guests Say</span>
+        <h2>Loved by <em>Thousands</em></h2>
+        <div class="overall-rating">
+          <span class="big-rating">4.9</span>
+          <div><div class="stars">★★★★★</div><small>Based on 8,400+ reviews</small></div>
+        </div>
+      </div>
+      <div class="reviews-grid reveal" id="reviewsGrid"></div>
+    </div>
+  </section>
+
+  <!-- HOST CTA -->
+  <section class="host-cta">
+    <div class="host-cta-img" style="background-image:url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=900&q=80')"></div>
+    <div class="host-cta-text reveal">
+      <span class="label">For Property Owners</span>
+      <h2>Earn More From<br/><em>Your Property</em></h2>
+      <p>List your apartment and earn up to ₦800,000/month. We handle all the marketing, bookings, and guest management.</p>
+      <div class="host-stats">
+        <div><strong>₦800K</strong><span>Avg Monthly Earnings</span></div>
+        <div><strong>85%</strong><span>Average Occupancy</span></div>
+        <div><strong>Free</strong><span>Property Listing</span></div>
+      </div>
+      <button class="btn-primary">Become a Host</button>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Get Exclusive <em>Deals</em></h2>
+      <p>Subscribe for last-minute discounts and new property alerts.</p>
+      <form class="nl-form" id="nlForm">
+        <input type="email" placeholder="your@email.com"/>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Stay<span>Nest</span></div>
+        <p>Premium shortlet apartments across Nigeria. Your home away from home.</p>
+        <div class="socials">
+          <a href="#">IG</a><a href="#">FB</a><a href="#">TW</a><a href="#">WA</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Guests</h4><ul><li><a href="#">How It Works</a></li><li><a href="#">Browse Listings</a></li><li><a href="#">Guest Policies</a></li><li><a href="#">Help Center</a></li></ul></div>
+      <div class="footer-col"><h4>Hosts</h4><ul><li><a href="#">List Your Space</a></li><li><a href="#">Host Resources</a></li><li><a href="#">Pricing & Fees</a></li><li><a href="#">Host Community</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom container"><p>© 2024 StayNest Ltd. All rights reserved.</p><div><a href="#">Privacy</a> · <a href="#">Terms</a></div></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
